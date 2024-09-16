@@ -9,7 +9,7 @@ class Post {
     this.avatar,
   });
 
-  late final int likes;
+  late int likes;
   late final int userLikes;
   late final String photoUrl;
   late final String description;
@@ -29,16 +29,5 @@ class Post {
     avatar = json['avatar'];
     comments = json['comments'];
     createddt = json['createddt'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final data = <String, dynamic>{};
-    data['likes'] = likes;
-    data['photoUrl'] = photoUrl;
-    data['description'] = description;
-    data['id'] = id;
-    data['comments'] = comments;
-    data['createddt'] = createddt;
-    return data;
   }
 }

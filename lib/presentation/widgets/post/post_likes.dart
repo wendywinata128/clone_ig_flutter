@@ -32,8 +32,8 @@ class _PostLikesState extends State<PostLikes> {
       isLoved = !isLoved;
     });
 
-    var result =
-        await getProvider(context)<PostProvider>(context, false).likeComments;
+    var result = await getProvider<PostProvider>(context, false)
+        .likeComments(widget.post.id);
 
     if (!result) {
       setState(() {

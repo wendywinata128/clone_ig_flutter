@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'package:clone_ig_flutter/core/constants/ui.dart';
 import 'package:clone_ig_flutter/core/utils/global_func.dart';
 import 'package:clone_ig_flutter/presentation/providers/auth_provider.dart';
 import 'package:clone_ig_flutter/presentation/screens/create_post_screen.dart';
@@ -61,6 +62,7 @@ class HomeBottomNavigation extends StatelessWidget {
             icon: FaIcon(
               FontAwesomeIcons.circlePlus,
               size: 28,
+              color: ConstantUI.PRIMARY_COLOR,
             ),
             label: "Add",
           ),

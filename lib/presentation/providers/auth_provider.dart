@@ -1,5 +1,4 @@
 import 'package:clone_ig_flutter/core/utils/global_func.dart';
-import 'package:clone_ig_flutter/core/utils/logger.dart';
 import 'package:clone_ig_flutter/core/utils/toast.dart';
 import 'package:clone_ig_flutter/core/utils/token_manager.dart';
 import 'package:clone_ig_flutter/data/models/user.dart';
@@ -60,7 +59,7 @@ class AuthProvider with ChangeNotifier {
 
     state.save();
 
-    logger.info(state.value);
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
 
     final result = await _authService.login(state.value);
 
@@ -68,12 +67,11 @@ class AuthProvider with ChangeNotifier {
       final token = result.data;
 
       if (token != null) {
-        SharedPreferences sharedPreferences =
-            await SharedPreferences.getInstance();
-
         sharedPreferences.setString("token", token);
         fetchUser(token, context);
       }
+    } else {
+      sharedPreferences.remove("token");
     }
 
     isLoading = false;
