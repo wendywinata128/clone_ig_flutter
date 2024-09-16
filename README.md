@@ -1,22 +1,20 @@
 #   Clone IG Flutter
-Cloning IG
+This test project is part of an assignment from Commsult, designed to showcase the development of a full-stack Instagram clone. It includes two projects: a mobile application (using Flutter) and a backend service (using Springboot). The mobile app replicates core Instagram features, such as posting, commenting, and liking, while the backend handles data storage, authentication, and API functionality.
 
 ##  Tech Stack And Libraries
--   Java Springboot -> Backend
--   MySQL -> Database
 -   Flutter -> Mobile Framework
 -   Provider -> State Management
 -   Dio -> Client Request
--   Photo Manager -> Get User Photo Albums
+-   Photo Manager -> Get User Storage Albums
 -   Intl -> Time Management
 -   Flutter Toast -> Toast Management
 -   Shared Preferences -> Authentication Management
 -   Pull To Refresh -> User Home Scrolling Effect
--   Robohash -> to load user avatar
+-   Robohash -> 3rd parties to load user avatar
 
 ##  How To Run
 1. Make sure the back-end already running
-2. This project is not using environment (String.fromEnvironment(..)) so you have to change base_url in `lib/core/constant/url.dart`
+2. This project is not using environment (String.fromEnvironment(..)) so you have to change base_url based on your back-end url in `lib/core/constant/url.dart`
 ```
     class ConstantURL {
         static const BASE_URL = "http://10.0.2.2:8080"; // ONLY CHANGE THIS WITH YOUR BACKEND URL
