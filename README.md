@@ -13,8 +13,12 @@ This test project is part of an assignment from Commsult, designed to showcase t
 -   Robohash -> 3rd parties to load user avatar
 
 ##  How To Run
-1. Make sure the back-end already running
-2. This project is not using environment (String.fromEnvironment(..)) so you have to change base_url based on your back-end url in `lib/core/constant/url.dart`
+1. clone repository
+```
+git clone https://github.com/wendywinata128/clone_ig_flutter.git
+```
+2. Make sure the back-end already running [Backend Project](https://github.com/wendywinata128/clone_ig_backend.git)
+3. This project is not using environment (String.fromEnvironment(..)) so you have to change base_url based on your back-end url in `lib/core/constant/url.dart`
 ```
     class ConstantURL {
         static const BASE_URL = "http://10.0.2.2:8080"; // ONLY CHANGE THIS WITH YOUR BACKEND URL
@@ -22,16 +26,16 @@ This test project is part of an assignment from Commsult, designed to showcase t
         static const USER_IMAGE_URL = "https://robohash.org/";
     }
 ```
-3.  Run Flutter Project with profile mode for better performance
+4.  Run Flutter Project with profile mode for better performance
 ```
 flutter run --profile
 ```
-4. Login with this account dummies
+5. Login with this account dummies
 ```
 username: codi.ziemann
 password: dummy123
 ```
-5. Explore..
+6. Explore..
 
 ##  Feature
 **Authentication**
@@ -75,14 +79,17 @@ password: dummy123
     <img src="readme_assets/profile.png" width=200/>
 </div>
 
-### Posts
+### Create Posts
 <div>
     <img src="readme_assets/create_1.png" width=200/>
     <img src="readme_assets/create_2.png" width=200/>
+</div>
+
+### Post Item
+<div>
     <img src="readme_assets/post_likes.png" width=200/>
     <img src="readme_assets/post_expanded.png" width=200/>
     <img src="readme_assets/post_expanded_2.png" width=200/>
-
 </div>
 
 ### Comments
@@ -91,5 +98,10 @@ password: dummy123
     <img src="readme_assets/comments_2.png" width=200/>
     <img src="readme_assets/comments_3.png" width=200/>
 </div>
+
+## Contact
+- Email: wendywinata128@gmail.com
+- LinkedIn: https://www.linkedin.com/in/wendyyy/
+
 
 
